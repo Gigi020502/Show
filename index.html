@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>im just a girl</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <main>
+            <div id="conteudo">
+                <h2>Vamos no Show do Linkin Park Bestie?</h2>
+                <div class="button-container">
+                    <button onclick="sim()">Sim</button>
+                    <div id="naoButton" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+                </div>
+                <div id e="music-control">
+                    <audio src="https://youtu.be/SRXH9AbT280?si=xDPNQsRJa89homMU" controls loop ></audio>
+                </div>
+            </div>
+            <div class="background">
+                <img src="Linkin_Park_-_From_Zero_Lead_Press_Photo_-_James_Minchin_III.jpg" alt="Slipknot 1">
+                <img src="kp-676x450.jpg" alt="Slipknot 2">
+                <img src="u2nkuo81y60b1.webp" alt="Slipknot 3">
+                <img src="73d1eec9fa2bd48f79e6be30a85a8b31.jpg" alt="Slipknot 4">
+                <img src="ab82caa5b6565f64ce8d2369e6fa16c2.jpg" alt="Slipknot 5">
+                <img src="b76ae510a8d407ad541f562445a23e25.jpg" alt="Slipknot 6">
+            </div>
+            <script>
+                function sim() {
+                    alert("Vamos divar nos looks :)");
+                    location.href = "https://www.ticketmaster.com.br/event/pre-venda-santander-linkin-park-sao-paulo";
+                }
+                function desvia(btn) {
+                    btn.style.position = 'absolute';
+                    btn.style.top = geraPosicao(10, 90);
+                    btn.style.left = geraPosicao(10, 90);
+                    console.log('Opa, desviei...');
+                }
+                function geraPosicao(min, max) {
+                    return (Math.random() * (max - min) + min) + "%";
+                }
+            </script>
+        </main>
+</body>
+</html>
